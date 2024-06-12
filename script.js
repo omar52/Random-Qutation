@@ -10,8 +10,8 @@ async function getQuot(){
     let response= await fetch(api);
     let data = await response.json();
     console.log(data);
-    author.innerText=data.author;
     qutation.innerText=`" ${data.content} "`;
+    author.innerHTML=`<i class="fa-solid fa-wand-magic-sparkles fa-fade"></i> ${data.author}`;
 }
 
 button.onclick=getQuot;
